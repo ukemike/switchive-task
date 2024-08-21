@@ -72,7 +72,7 @@ const Home = () => {
       <Box
         maxW="7xl"
         mx="auto"
-        px={{ base: "4", md: "8", lg: "12" }}
+        px={{ base: "4", md: "8", lg: "6" }}
         py={{ base: "6", md: "8", lg: "12" }}
       >
         <HStack alignItems="center" justifyContent="space-between" mb="8">
@@ -119,7 +119,7 @@ const Home = () => {
         </HStack>
         <ProductGrid>
           {isLoading || isFetching
-            ? [...Array(12)].map((_, index) => <ProductSkeleton key={index} />)
+            ? [...Array(10)].map((_, index) => <ProductSkeleton key={index} />)
             : allProducts?.map((product: any) => (
                 <ProductCard key={product.id} product={product} />
               ))}
